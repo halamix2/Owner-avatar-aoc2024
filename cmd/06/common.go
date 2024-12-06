@@ -30,10 +30,7 @@ type Tile struct {
 func (t *Tile) Visit() bool {
 	t.data = 't'
 	t.visited++
-	if t.visited > 4 {
-		return true
-	}
-	return false
+	return t.visited > 4
 }
 
 type Floor struct {
